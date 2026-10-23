@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+/* ============================================================
+   AERORADAR — DESIGN TOKENS
+   ============================================================
+   In Tailwind v4, there's no tailwind.config.js.
+   Instead, you define your custom theme right here in CSS
+   using the @theme directive.
+   ============================================================ */
+
+@theme {
+  /* ── COLORS ─────────────────────────────────────────────── */
+
+  /* Brand / Interactive */
+  --color-primary: #007AFF;           /* "Flighty Blue" — CTAs, active states, links */
+  --color-primary-dark: #0058BC;      /* Hover state for primary buttons */
+  --color-primary-container: #0070EB; /* Primary containers */
+  --color-primary-soft: #D8E2FF;      /* Light tint for primary backgrounds */
+
+  /* Semantic / Status */
+  --color-success: #34C759;           /* "Mint" — on-time, early, positive */
+  --color-warning: #FF9F0A;           /* "Amber" — delays, caution */
+  --color-error: #BA1A1A;             /* Errors, cancellations */
+
+  /* Neutrals — the workhorse palette */
+  --color-charcoal: #1D1D1F;          /* Primary text, high-priority headings */
+  --color-on-surface: #181C23;        /* Body text */
+  --color-on-surface-variant: #414755;/* Secondary text, descriptions */
+  --color-outline: #717786;           /* Borders, dividers, muted text */
+  --color-outline-variant: #C1C6D7;   /* Subtle borders, separators */
+
+  /* Surfaces */
+  --color-surface: #FFFFFF;           /* Primary background */
+  --color-surface-dim: #D8D9E5;       /* Disabled states, muted areas */
+  --color-surface-container: #F2F2F7; /* Cards, input fields, secondary bg */
+  --color-surface-container-high: #E6E8F3; /* Elevated containers */
+  --color-surface-tint: #f9f9ff;      /* Page-level tinted background */
+
+  /* Inverted (for dark sections like Radar Coverage) */
+  --color-inverse-surface: #2D3039;
+  --color-inverse-on-surface: #EEF0FC;
+
+  /* ── FONTS ──────────────────────────────────────────────── */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Space Mono", ui-monospace, monospace;
+
+  /* ── BORDER RADIUS ──────────────────────────────────────── */
+  --radius-card: 1.5rem;   /* 24px — primary cards, modals */
+  --radius-input: 0.75rem; /* 12px — input fields */
+  --radius-pill: 9999px;   /* Fully rounded — buttons, tags */
+
+  /* ── SHADOWS ────────────────────────────────────────────── */
+  /* "Ambient shadows" — very soft, no offset, low opacity */
+  --shadow-ambient: 0 0 40px rgba(0, 0, 0, 0.04);
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.04),
+                 0 0 20px rgba(0, 0, 0, 0.02);
+  --shadow-elevated: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* ============================================================
+   BASE STYLES
+   ============================================================ */
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-on-surface);
+  background-color: var(--color-surface);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================================
+   GLASS EFFECT — utility class for glassmorphic surfaces
+   ============================================================ */
+.glass {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ============================================================
+   UTILITIES
+   ============================================================ */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

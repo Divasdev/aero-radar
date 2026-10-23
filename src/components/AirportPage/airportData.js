@@ -1,0 +1,57 @@
+// Curated UI fixtures. Operational figures and schedules are illustrative, not live.
+export const airports = [
+  {
+    code: 'SFO', icao: 'KSFO', name: 'San Francisco International', city: 'San Francisco',
+    location: 'California, United States', region: 'North America', coordinates: '37.6213° N / 122.3790° W',
+    terminals: ['Terminal 1', 'Terminal 2', 'Terminal 3', 'International'], runways: 4, elevation: '13 ft',
+    time: '10:42', zone: 'PDT', onTime: 87, delay: 12, departures: 482, destinations: 128,
+    temperature: 18, condition: 'Partly cloudy', wind: '15 kt', visibility: '10 mi', humidity: '64%',
+    carriers: ['United', 'Alaska', 'Delta', 'American', 'British Airways'],
+    boardDestinations: [{ code: 'JFK', city: 'New York' }, { code: 'SEA', city: 'Seattle' }, { code: 'ATL', city: 'Atlanta' }, { code: 'LAX', city: 'Los Angeles' }],
+    routes: [{ code: 'JFK', city: 'New York', duration: '5h 20m', flights: 14 }, { code: 'LHR', city: 'London', duration: '10h 35m', flights: 8 }, { code: 'HND', city: 'Tokyo', duration: '11h 10m', flights: 6 }],
+    metar: 'KSFO 201742Z 28015KT 10SM FEW030 18/11 A2992',
+  },
+  {
+    code: 'JFK', icao: 'KJFK', name: 'John F. Kennedy International', city: 'New York',
+    location: 'New York, United States', region: 'North America', coordinates: '40.6413° N / 73.7781° W',
+    terminals: ['Terminal 1', 'Terminal 4', 'Terminal 5', 'Terminal 7', 'Terminal 8'], runways: 4, elevation: '13 ft',
+    time: '13:42', zone: 'EDT', onTime: 82, delay: 18, departures: 521, destinations: 182,
+    temperature: 23, condition: 'Partly cloudy', wind: '9 kt', visibility: '10 mi', humidity: '58%',
+    carriers: ['Delta', 'JetBlue', 'American', 'British Airways', 'Emirates'],
+    boardDestinations: [{ code: 'ATL', city: 'Atlanta' }, { code: 'BOS', city: 'Boston' }, { code: 'LAX', city: 'Los Angeles' }, { code: 'LHR', city: 'London' }],
+    routes: [{ code: 'LAX', city: 'Los Angeles', duration: '6h 10m', flights: 22 }, { code: 'LHR', city: 'London', duration: '7h 05m', flights: 18 }, { code: 'CDG', city: 'Paris', duration: '7h 20m', flights: 9 }],
+    metar: 'KJFK 201742Z 22009KT 10SM FEW040 23/14 A3004',
+  },
+  {
+    code: 'LHR', icao: 'EGLL', name: 'London Heathrow', city: 'London',
+    location: 'England, United Kingdom', region: 'Europe', coordinates: '51.4700° N / 0.4543° W',
+    terminals: ['Terminal 2', 'Terminal 3', 'Terminal 4', 'Terminal 5'], runways: 2, elevation: '83 ft',
+    time: '18:42', zone: 'BST', onTime: 89, delay: 9, departures: 634, destinations: 214,
+    temperature: 16, condition: 'Scattered clouds', wind: '7 kt', visibility: '10 mi', humidity: '72%',
+    carriers: ['British Airways', 'Virgin Atlantic', 'United', 'Emirates', 'Lufthansa'],
+    boardDestinations: [{ code: 'JFK', city: 'New York' }, { code: 'LAX', city: 'Los Angeles' }, { code: 'SFO', city: 'San Francisco' }, { code: 'DXB', city: 'Dubai' }],
+    routes: [{ code: 'JFK', city: 'New York', duration: '8h 05m', flights: 18 }, { code: 'DXB', city: 'Dubai', duration: '6h 55m', flights: 12 }, { code: 'SIN', city: 'Singapore', duration: '13h 10m', flights: 6 }],
+    metar: 'EGLL 201750Z 24007KT 9999 SCT025 16/11 Q1016',
+  },
+  {
+    code: 'HND', icao: 'RJTT', name: 'Tokyo Haneda', city: 'Tokyo',
+    location: 'Tokyo, Japan', region: 'Asia Pacific', coordinates: '35.5494° N / 139.7798° E',
+    terminals: ['Terminal 1', 'Terminal 2', 'Terminal 3'], runways: 4, elevation: '21 ft',
+    time: '02:42', zone: 'JST', onTime: 94, delay: 5, departures: 598, destinations: 106,
+    temperature: 25, condition: 'Scattered clouds', wind: '6 kt', visibility: '10 mi', humidity: '69%',
+    carriers: ['ANA', 'Japan Airlines', 'Skymark', 'Air Do', 'United'],
+    boardDestinations: [{ code: 'CTS', city: 'Sapporo' }, { code: 'FUK', city: 'Fukuoka' }, { code: 'OKA', city: 'Okinawa' }, { code: 'AKJ', city: 'Asahikawa' }],
+    routes: [{ code: 'CTS', city: 'Sapporo', duration: '1h 35m', flights: 32 }, { code: 'FUK', city: 'Fukuoka', duration: '1h 55m', flights: 28 }, { code: 'SFO', city: 'San Francisco', duration: '9h 20m', flights: 6 }],
+    metar: 'RJTT 201730Z 18006KT 9999 SCT030 25/19 Q1013',
+  },
+];
+
+export const airlineStyles = {
+  United: { initials: 'UA', color: '#1756aa' }, Alaska: { initials: 'AS', color: '#154a5a' },
+  Delta: { initials: 'DL', color: '#a9253e' }, American: { initials: 'AA', color: '#397eac' },
+  'British Airways': { initials: 'BA', color: '#22365e' }, JetBlue: { initials: 'B6', color: '#244a8d' },
+  Emirates: { initials: 'EK', color: '#b63036' }, 'Virgin Atlantic': { initials: 'VS', color: '#ac2c48' },
+  Lufthansa: { initials: 'LH', color: '#253f6c' }, ANA: { initials: 'NH', color: '#1760a8' },
+  'Japan Airlines': { initials: 'JL', color: '#b82d3c' }, Skymark: { initials: 'BC', color: '#355b88' },
+  'Air Do': { initials: 'HD', color: '#377d95' },
+};
