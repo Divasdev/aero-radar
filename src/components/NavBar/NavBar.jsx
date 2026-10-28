@@ -17,7 +17,7 @@ export function NavBar() {
 export function Logo() {
    return (
       <Link to="/" className='flex items-center gap-2'>
-         <img src={logoImg} className='size-8 rounded-full' />
+         <img src={logoImg} className='size-8 rounded-full'  alt='AeroRadar'/>
          <h2 className='font-semibold text-charcoal text-xl'>AeroRadar</h2>
       </Link>
    )
@@ -28,8 +28,8 @@ export function NavLinks() {
       <div className='flex items-center gap-8 text-sm font-medium text-outline'>
          <Link to="/" className={location.pathname === '/' ? 'text-primary' : 'hover:text-primary transition-colors'}>Features</Link>
          <Link to="/airport" className={location.pathname === '/airport' ? 'text-primary' : 'hover:text-primary transition-colors'}>Airport</Link>
-         <a href='#' className='hover:text-primary transition-colors'>Flights</a>
-         <a href='#' className='hover:text-primary transition-colors'>Analytics</a>
+         <Link to="/flight" className={location.pathname === '/flight' ? 'text-primary' : 'hover:text-primary transition-colors'}>Flight</Link>
+         <Link to="/analytics" className={location.pathname === '/analytics' ? 'text-primary' : 'hover:text-primary transition-colors'}>Analytics</Link>
       </div>
    )
 }
