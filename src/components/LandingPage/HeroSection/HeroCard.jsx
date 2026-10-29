@@ -1,4 +1,4 @@
-import React from "react";
+
 
 export function HeroCard() {
   return (
@@ -42,7 +42,7 @@ export function HeroCard() {
           
           {/* Gate Row */}
           <div className="flex items-center gap-4">
-            <div className="w-6 h-6 text-gray-400 flex-shrink-0">
+            <div className="w-6 h-6 text-gray-400 shrink-0">
                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
                   <rect x="3" y="3" width="18" height="18" rx="2" />
                   <path d="M9 3v18" />

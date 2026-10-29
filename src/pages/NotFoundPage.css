@@ -1,0 +1,19 @@
+/* Animations for the 404 radar. Tailwind's built-in spin is too fast for a radar sweep. */
+@keyframes nf-spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes nf-rise {
+  from { opacity: 0; transform: translateY(14px); }
+}
+@keyframes nf-blink {
+  50% { opacity: 0.3; }
+}
+
+.nf-sweep { animation: nf-spin 4.5s linear infinite; }
+.nf-orbit { animation: nf-spin 16s linear infinite; }
+.nf-rise { animation: nf-rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+.nf-blink { animation: nf-blink 1.6s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .nf-sweep, .nf-orbit, .nf-rise, .nf-blink { animation: none; }
+}
