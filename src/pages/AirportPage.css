@@ -325,13 +325,6 @@
   .airport-explore-art { right: 20px; }
   .airport-endnote { flex-wrap: wrap; margin-top: 30px; }
   .airport-endnote > span:nth-child(2) { display: none; }
-  .airport-page > nav { padding-inline: 18px; top: 12px; margin-top: 14px; }
-  .airport-page > nav > div { padding: 13px 17px; background: #ffffffeb; }
-  .airport-page > nav > div > div { gap: 19px; }
-  .airport-page > nav > div > div > a[href="#"], .airport-page > nav > div > button { display: none; }
-  .airport-page > nav h2 { font-size: 19px; }
-  .airport-page > nav img { width: 27px; height: 27px; }
-  .airport-page > nav a { font-size: 13px; }
   .airport-page > footer > div { flex-direction: column; gap: 30px; padding: 32px 23px; }
   .airport-page > footer nav { column-gap: 20px; }
 }
