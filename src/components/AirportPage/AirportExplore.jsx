@@ -1,5 +1,5 @@
 import { airports } from './airportData';
-import { AirportIcon } from './AirportIcon';
+import { AirportIcon } from '../shared';
 
 export function AirportExplore({ selectedCode, onSelect }) {
   return (

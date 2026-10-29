@@ -1,7 +1,5 @@
 import { useState } from 'react';
-import { AirportIcon } from './AirportIcon';
-import { AirlineMark } from './AirlinesOperating';
-import { airlineStyles } from './airportData';
+import { AirlineMark, AirportIcon, airlineStyles } from '../shared';
 
 export function TerminalStatus({ airport }) {
   const [direction, setDirection] = useState('Departures');

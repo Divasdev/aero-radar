@@ -1,4 +1,4 @@
-import { AirportIcon } from './AirportIcon';
+import { AirportIcon } from '../shared';
 import { AirfieldMap } from './AirfieldMap';
 
 export function AirportInfoCard({ airport, saved, onSave }) {

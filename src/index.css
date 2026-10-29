@@ -57,6 +57,18 @@
   --shadow-elevated: 0 4px 24px rgba(0, 0, 0, 0.06);
 }
 
+/* ── MOTION ─────────────────────────────────────────────── */
+/* "static" keeps these variables in the CSS even before any Tailwind class uses them,
+   so plain CSS files and JS can always read them. */
+@theme static {
+  /* One curve for everything that "arrives": fast start, gentle settle.
+     Also a Tailwind class: ease-out-expo */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 150ms;  /* hovers, small color changes */
+  --duration-base: 300ms;  /* buttons, toggles, pills */
+  --duration-slow: 600ms;  /* panels and sections revealing on scroll */
+}
+
 /* ============================================================
    BASE STYLES
    ============================================================ */
@@ -88,4 +100,26 @@ body {
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+/* ============================================================
+   SCROLL REVEAL — pair with useReveal():
+   className={`reveal ${isVisible ? 'is-visible' : ''}`}
+   ============================================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity var(--duration-slow) var(--ease-out-expo),
+    transform var(--duration-slow) var(--ease-out-expo);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    transform: none;
+    transition: opacity var(--duration-fast) linear;
+  }
 }

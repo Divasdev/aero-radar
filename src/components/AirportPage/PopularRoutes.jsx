@@ -1,4 +1,4 @@
-import { AirportIcon } from './AirportIcon';
+import { AirportIcon } from '../shared';
 
 export function PopularRoutes({ airport }) {
   return (

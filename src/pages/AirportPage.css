@@ -181,8 +181,6 @@
 .airport-airlines-label h3 { font-size: 17px; font-weight: 500; letter-spacing: -.4px; margin: 4px 0 0; }
 .airport-airline-list { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex: 1; }
 .airport-airline { display: flex; align-items: center; gap: 9px; font-size: 13px; font-weight: 500; color: #68778a; }
-.airport-airline-mark { width: 37px; height: 37px; flex: 0 0 37px; border-radius: 9px; display: grid; place-items: center; color: var(--airline-color); background: color-mix(in srgb, var(--airline-color) 7%, white); font: 700 12px var(--font-mono); border: 1px solid color-mix(in srgb, var(--airline-color) 12%, white); }
-.airport-airline-mark.small { width: 33px; height: 33px; flex-basis: 33px; border-radius: 8px; font-size: 10px; }
 .airport-network { position: relative; overflow: hidden; display: grid; grid-template-columns: 1fr 2.6fr; gap: 30px; align-items: center; border-radius: 24px; background: #192331; color: white; padding: 40px; }
 .airport-network-background { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
 .airport-network-copy { position: relative; }
@@ -249,7 +247,7 @@
   .airport-flight-table th:last-child, .airport-flight-table td:last-child { padding-right: 20px; }
   .airport-flight-table td, .airport-flight-table th { padding-inline: 9px; }
   .airport-flight-destination { gap: 8px; }
-  .airport-flight-destination .airport-airline-mark { display: none; }
+  .airport-flight-destination .ar-airline-mark { display: none; }
   .airport-weather, .airport-guide { padding: 23px 20px; }
   .airport-weather-art { width: 80px; }
   .airport-weather .airport-weather-main h2 { font-size: 68px; }
@@ -293,7 +291,7 @@
   .airport-board-controls { padding-inline: 23px; }
   .airport-flight-table th:first-child, .airport-flight-table td:first-child { padding-left: 23px; }
   .airport-flight-table th:last-child, .airport-flight-table td:last-child { padding-right: 23px; }
-  .airport-flight-destination .airport-airline-mark { display: grid; }
+  .airport-flight-destination .ar-airline-mark { display: grid; }
   .airport-weather { padding: 26px; }
   .airport-weather-main { justify-content: start; gap: 50px; }
   .airport-weather-art { width: 130px; }
@@ -337,7 +335,7 @@
   .airport-flight-table th, .airport-flight-table td { padding-inline: 7px; }
   .airport-flight-table th:first-child, .airport-flight-table td:first-child { padding-left: 16px; }
   .airport-flight-table th:last-child, .airport-flight-table td:last-child { padding-right: 16px; }
-  .airport-flight-destination .airport-airline-mark { display: none; }
+  .airport-flight-destination .ar-airline-mark { display: none; }
   .airport-flight-destination strong { font-size: 13px; }
   .airport-flight-destination small { font-size: 11px; }
   .airport-flight-status { font-size: 10px; padding-inline: 6px; }

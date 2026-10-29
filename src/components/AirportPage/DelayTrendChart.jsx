@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { AirportIcon } from './AirportIcon';
+import { AirportIcon } from '../shared';
 
 export function DelayTrendChart({ airport }) {
   const [selectedDay, setSelectedDay] = useState(6);

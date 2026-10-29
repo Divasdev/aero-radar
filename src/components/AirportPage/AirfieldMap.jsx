@@ -1,5 +1,5 @@
 import { useId } from 'react';
-import { AirportIcon } from './AirportIcon';
+import { AirportIcon } from '../shared';
 
 export function AirfieldMap({ airport }) {
   const gridId = useId();

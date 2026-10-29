@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { airports } from './airportData';
-import { AirportIcon } from './AirportIcon';
+import { AirportIcon } from '../shared';
 
 export function AirportSearch({ selectedCode, onSelect }) {
   const [query, setQuery] = useState('');

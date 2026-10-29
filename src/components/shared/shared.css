@@ -1,0 +1,38 @@
+/* Shared building blocks. Values match the Airport page so every page feels the same.
+   They live in the "components" layer, so page CSS and Tailwind utilities can still override them. */
+@layer components {
+  .ar-mono { font-family: var(--font-mono); }
+  .ar-dot { display: inline-block; width: 5px; height: 5px; flex: 0 0 5px; border-radius: 50%; background: currentColor; }
+
+  /* Eyebrow: small mono label above a heading */
+  .ar-eyebrow { display: inline-flex; align-items: center; gap: 8px; color: #737d8d; font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: 1.6px; line-height: 1.7; text-transform: uppercase; }
+  .ar-eyebrow--primary { color: var(--color-primary); }
+  .ar-eyebrow svg { flex-shrink: 0; }
+
+  /* StatusPill */
+  .ar-pill { display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border: 1px solid transparent; border-radius: 999px; font-size: 12px; font-weight: 500; white-space: nowrap; }
+  .ar-pill--compact { gap: 5px; padding: 5px 8px; border: 0; border-radius: 5px; font-weight: 400; }
+  .ar-pill--compact .ar-dot { width: 4px; height: 4px; flex-basis: 4px; }
+  .ar-pill--ok { color: #338455; background: #f0f8f1; border-color: #e2f0e4; }
+  .ar-pill--info { color: #2a76cf; background: #edf4ff; border-color: #d6e6fb; }
+  .ar-pill--warn { color: #ad7a26; background: #fff6e7; border-color: #f6e5c3; }
+  .ar-pill--bad { color: var(--color-error); background: #fdeeee; border-color: #f6d9d9; }
+  .ar-pill--ghost { color: #8692a2; background: transparent; border-color: #e8ecf2; }
+
+  /* Panel: white card with a soft border */
+  .ar-panel { min-width: 0; overflow: hidden; border: 1px solid #e7eaf0; border-radius: 22px; background: #fff; }
+
+  /* SectionHead: eyebrow + title, with an optional element on the right */
+  .ar-section-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px 18px; }
+  .ar-section-head__title { margin: 6px 0 0; color: var(--color-charcoal); font-size: 22px; font-weight: 600; letter-spacing: -0.7px; line-height: 1.3; }
+  .ar-panel > .ar-section-head { padding: 31px 29px 0; }
+
+  /* AirlineMark: airline initials tinted with the airline's color */
+  .ar-airline-mark { width: 37px; height: 37px; flex: 0 0 37px; border-radius: 9px; display: grid; place-items: center; color: var(--airline-color); background: color-mix(in srgb, var(--airline-color) 7%, white); font: 700 12px var(--font-mono); border: 1px solid color-mix(in srgb, var(--airline-color) 12%, white); }
+  .ar-airline-mark--small { width: 33px; height: 33px; flex-basis: 33px; border-radius: 8px; font-size: 10px; }
+
+  @media (max-width: 640px) {
+    .ar-panel > .ar-section-head { padding: 24px 20px 0; }
+    .ar-section-head__title { font-size: 20px; }
+  }
+}
