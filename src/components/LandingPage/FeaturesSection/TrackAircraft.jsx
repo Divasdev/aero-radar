@@ -1,4 +1,4 @@
-import aeroImg from "../../../assets/aeroplane-wings.jpg";
+import aeroImg from "../../../assets/aeroplane-wings.webp";
 
 
 export function TrackAircraft() {

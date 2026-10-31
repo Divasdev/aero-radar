@@ -1,7 +1,7 @@
 import { HeroBadge } from "./HeroBadge"
 import { HeroHeader } from "./HeroHeader"
 import { HeroCard } from "./HeroCard"
-import flowLineImg from "../../../assets/flow-line.png"
+import flowLineImg from "../../../assets/flow-line.webp"
 import globeIconImg from "../../../assets/globe-icon.png"
 
 export function HeroSection() {
